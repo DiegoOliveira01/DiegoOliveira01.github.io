@@ -1,77 +1,198 @@
+/* =========================================================
+   CONFIGURAÇÕES GLOBAIS
+   Define tipografia base e estilos comuns
+   ========================================================= */
+
 body {
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Títulos principais do site */
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
-#perfil {
-    padding: 60px 20px;
-    background-color: #f4f6f8; /* cinza claro */
+/* =========================================================
+   HEADER / NAVEGAÇÃO
+   ========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    z-index: 1000;
 }
 
+/* Container do header */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo / Nome */
+.logo a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+/* Lista de navegação */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.nav-list a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Hover */
+.nav-list a:hover {
+    color: #1e88e5;
+}
+
+/* Linha animada abaixo do link */
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #1e88e5;
+    transition: width 0.3s;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   HEADER RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+
+/* =========================================================
+   SEÇÃO: PERFIL / APRESENTAÇÃO
+   Área inicial com foto, descrição e tecnologias
+   ========================================================= */
+
+#perfil {
+    padding: 60px 20px;
+    background-color: #f4f6f8; /* Fundo cinza claro para destaque */
+}
+
+/* Container centralizado do perfil */
 .perfil-container {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Responsividade */
 }
 
+/* Foto de perfil */
 .perfil-foto img {
     width: 220px;
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #1e88e5; /* azul */
+    border: 4px solid #1e88e5; /* Azul institucional */
 }
 
+/* Informações do perfil */
 .perfil-info {
     flex: 1;
 }
 
+/* Título do cargo */
 .perfil-info h2 {
     font-size: 28px;
-    color: #1e88e5; /* azul */
+    color: #1e88e5;
     margin-bottom: 15px;
 }
 
+/* Texto de apresentação */
 .perfil-info p {
     font-size: 16px;
-    color: #555; /* cinza */
+    color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
+/* Lista de áreas de atuação / tecnologias */
 .atuacao {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+/* Tags individuais de atuação */
 .atuacao span {
-    background-color: #e8f5e9; /* verde claro */
-    color: #2e7d32; /* verde */
+    background-color: #e8f5e9;
+    color: #2e7d32;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
 }
 
+/* =========================================================
+   SEÇÃO: PROJETOS
+   Cards de projetos principais e secundários
+   ========================================================= */
+
 #projetos {
     padding: 70px 20px;
     background-color: #ffffff;
 }
 
+/* Título da seção de projetos */
 #projetos h2 {
     text-align: center;
     font-size: 32px;
     color: #1e88e5;
     margin-bottom: 50px;
 }
+
+/* =========================================================
+   COMPONENTE: IMAGEM DO PROJETO
+   Controla enquadramento e corte da imagem
+   ========================================================= */
 
 .projeto-imagem {
     height: 240px;
@@ -81,12 +202,15 @@ h1, h2, h3 {
 .projeto-imagem img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    object-fit: cover;          /* Evita distorção */
+    object-position: center;    /* Centraliza o foco da imagem */
 }
 
+/* =========================================================
+   COMPONENTE: CARD DE PROJETO (BASE)
+   Estilos compartilhados entre cards grandes e pequenos
+   ========================================================= */
 
-/* ===== Cards Gerais ===== */
 .projeto-card {
     text-decoration: none;
     color: inherit;
@@ -97,18 +221,24 @@ h1, h2, h3 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Efeito hover para interação */
 .projeto-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
+/* Imagens padrão dos cards */
 .projeto-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* ===== Projetos Principais ===== */
+/* =========================================================
+   PROJETOS PRINCIPAIS
+   Cards maiores, com mais destaque visual
+   ========================================================= */
+
 .projetos-principais {
     max-width: 1200px;
     margin: 0 auto 60px;
@@ -117,33 +247,42 @@ h1, h2, h3 {
     gap: 30px;
 }
 
+/* Imagem maior nos projetos principais */
 .projeto-card.grande img {
     height: 260px;
 }
 
+/* Área de texto do card principal */
 .projeto-card.grande .projeto-info {
     padding: 25px;
 }
 
+/* Título do projeto */
 .projeto-card.grande h3 {
     font-size: 24px;
     color: #1e88e5;
     margin-bottom: 10px;
 }
 
+/* Descrição do projeto */
 .projeto-card.grande p {
     color: #555;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
+/* Tecnologias utilizadas */
 .projeto-card.grande span {
     font-size: 14px;
     font-weight: 500;
     color: #2e7d32;
 }
 
-/* ===== Projetos Menores ===== */
+/* =========================================================
+   PROJETOS SECUNDÁRIOS
+   Cards menores para projetos complementares
+   ========================================================= */
+
 .projetos-menores {
     max-width: 1200px;
     margin: 0 auto;
@@ -152,23 +291,314 @@ h1, h2, h3 {
     gap: 25px;
 }
 
+/* Imagem reduzida */
 .projeto-card.pequeno img {
     height: 140px;
 }
 
+/* Ajuste de espaçamento */
 .projeto-card.pequeno {
     padding-bottom: 15px;
 }
 
+/* Título do projeto secundário */
 .projeto-card.pequeno h4 {
     font-size: 18px;
     color: #1e88e5;
     margin: 15px;
 }
 
+/* Descrição curta */
 .projeto-card.pequeno p {
     font-size: 14px;
     color: #666;
     margin: 0 15px;
 }
+
+/* =========================================================
+   SEÇÃO: HABILIDADES
+   Hard Skills e Soft Skills
+   ========================================================= */
+
+#habilidades {
+    padding: 70px 20px;
+    background-color: #f4f6f8; /* mesmo fundo da seção perfil */
+}
+
+/* Título principal */
+#habilidades h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo explicativo */
+.habilidades-subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Container dos cards */
+.habilidades-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card base */
+.habilidade-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-top: 4px solid #1e88e5;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover */
+.habilidade-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Título do card */
+.habilidade-card h3 {
+    font-size: 24px;
+    color: #1e88e5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Lista */
+.habilidade-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Item da lista */
+.habilidade-card li {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+}
+
+/* Ícone padrão (Hard Skills) */
+.habilidade-card li::before {
+    content: "✔";
+    color: #2e7d32;
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+}
+
+/* Diferencia visualmente Soft Skills */
+.habilidade-card.soft {
+    border-top: 4px solid #2e7d32;
+}
+
+/* =========================================================
+   SEÇÃO: FORMAÇÃO ACADÊMICA
+   ========================================================= */
+
+#formacao {
+    padding: 70px 20px;
+    background-color: #ffffff; /* alterna com habilidades */
+}
+
+/* Título da seção */
+#formacao h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.formacao-subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Container */
+.formacao-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card da formação */
+.formacao-card {
+    background-color: #f5f7fa;
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left: 5px solid #1e88e5;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover */
+.formacao-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Nome do curso */
+.formacao-card h3 {
+    font-size: 26px;
+    color: #1e88e5;
+    margin-bottom: 5px;
+}
+
+/* Instituição / período */
+.formacao-instituicao {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+/* Descrição */
+.formacao-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Lista de destaques */
+.formacao-destaques {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Item da lista */
+.formacao-destaques li {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 22px;
+    position: relative;
+}
+
+/* Ícone */
+.formacao-destaques li::before {
+    content: "🎓";
+    position: absolute;
+    left: 0;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: #0f172a; /* tom escuro elegante */
+    color: #cbd5f5;
+    padding: 60px 20px 20px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+.footer-nav h4,
+.footer-social h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: 8px;
+}
+
+.footer-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #38bdf8; /* destaque */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #38bdf8;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.social-links.icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.social-links.icons i {
+    font-size: 1.2rem;
+    color: #38bdf8;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover com leve animação */
+.social-links.icons a:hover i {
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
 

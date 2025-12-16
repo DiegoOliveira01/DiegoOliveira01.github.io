@@ -5,11 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Oliveira - Desenvolvedor Java</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Header -->
+<header class="header">
+    <div class="header-container">
+
+        <!-- Logo / Nome -->
+        <div class="logo">
+            <a href="#perfil">Diego Oliveira</a>
+        </div>
+
+        <!-- Navegação -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#perfil">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Área Perfil -->
 <section id="perfil">
     <div class="perfil-container">
 
@@ -106,9 +130,124 @@
     </div>
 </section>
 
-<footer>
-    <p>Contato:</p>
+<section id="habilidades">
+    <h2>Habilidades</h2>
+    <p class="habilidades-subtitulo">
+        Competências técnicas e comportamentais aplicadas no desenvolvimento de software,
+    <strong>todas já utilizadas em projetos reais, acadêmicos ou pessoais</strong>, com foco em soluções
+    funcionais, organizadas e escaláveis.
+    </p>
+
+    <div class="habilidades-container">
+
+        <!-- HARD SKILLS -->
+        <div class="habilidade-card">
+            <h3>Hard Skills</h3>
+            <ul>
+                <li>Java (POO, boas práticas)</li>
+                <li>JavaFX (Desktop)</li>
+                <li>Android (Java)</li>
+                <li>PostgreSQL / MySQL</li>
+                <li>Firebase (Auth / Realtime Database / Storage)</li>
+                <li>Arquitetura em camadas</li>
+                <li>CRUD e regras de negócio</li>
+                <li>Git e versionamento</li>
+            </ul>
+        </div>
+
+        <!-- SOFT SKILLS -->
+        <div class="habilidade-card soft">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Organização e atenção a detalhes</li>
+                <li>Pensamento lógico e analítico</li>
+                <li>Autonomia na resolução de problemas</li>
+                <li>Boa comunicação</li>
+                <li>Facilidade para aprender novas tecnologias</li>
+                <li>Comprometimento com prazos</li>
+                <li>Trabalho em equipe</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="formacao">
+    <h2>Formação Acadêmica</h2>
+    <p class="formacao-subtitulo">
+        Formação voltada ao desenvolvimento de software, com base sólida em
+        programação, lógica, estruturas de dados e sistemas computacionais.
+    </p>
+
+    <div class="formacao-container">
+
+        <div class="formacao-card">
+            <h3>Ciência da Computação</h3>
+            <span class="formacao-instituicao">
+                Faculdade Estacio de Sá • Bacharelado • Conclusão em 2025.2
+            </span>
+
+            <p>
+                Graduação com foco em fundamentos da computação, desenvolvimento de
+                software e resolução de problemas, aplicando conceitos teóricos e
+                práticos em projetos acadêmicos e pessoais.
+            </p>
+
+            <ul class="formacao-destaques">
+                <li>Programação orientada a objetos</li>
+                <li>Estruturas de dados</li>
+                <li>Banco de dados</li>
+                <li>Lógica e algoritmos</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<footer id="contato" class="footer">
+    <div class="footer-container">
+
+        <!-- Info principal -->
+        <div class="footer-brand">
+            <h3>Diego Oliveira</h3>
+            <p>Desenvolvedor Java Back-End</p>
+        </div>
+
+        <!-- Navegação rápida -->
+        <div class="footer-nav">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#perfil">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="footer-social">
+    <h4>Conecte-se</h4>
+
+    <div class="social-links icons">
+        <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/SEU-USUARIO" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            GitHub
+        </a>
+    </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Diego Oliveira</p>
+    </div>
 </footer>
 
+
+<script src="scroll.js"></script>
 </body>
 </html>
