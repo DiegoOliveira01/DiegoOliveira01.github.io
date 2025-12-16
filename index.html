@@ -4,38 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Oliveira - Desenvolvedor Java</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Diego Oliveira</h1>
-    <p>Desenvolvedor Java • JavaFX •</p>
-    <a href="#projetos">Ver Projetos</a>
-</header>
+<section id="perfil">
+    <div class="perfil-container">
 
-<section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Sou desenvolvedor Java com experiência em Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nesciunt harum itaque laboriosam dolor fugiat consectetur? Magni qui sit alias, id soluta possimus magnam cum maiores. Modi non nam aspernatur.</p>
-</section>
+        <div class="perfil-foto">
+            <img src="images/foto-perfil.jpg" alt="Foto de Diego Oliveira">
+        </div>
 
-<section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-        <li>Java / JavaFX</li>
-        <li>Spring Boot</li>
-        <li>MySQL / JDBC</li>
-        <li>HTML / CSS / JavaScript</li>
-        <li>Git e GitHub</li>
-    </ul>
+        <div class="perfil-info">
+            <h2>Desenvolvedor Java Back-End</h2>
+
+            <p>
+                Sou desenvolvedor Java com foco em aplicações back-end,
+                criando soluções robustas, organizadas e escaláveis.
+                Tenho experiência no desenvolvimento de sistemas desktop
+                e Android, trabalhando com regras de negócio, banco de dados
+                e integração entre camadas.
+            </p>
+
+            <div class="atuacao">
+                <span>Java</span>
+                <span>Android (Java)</span>
+                <span>Aplicações Desktop</span>
+                <span>PostgreSQL & Firebase</span>
+                <span>Aplicações Multiusuário</span>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <section id="projetos">
-    <h2>Projetos</h2>
-    <div class="card">
-        <h3>TESTE</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nemo numquam eius repellendus magnam laboriosam, aut atque reiciendis eum illum blanditiis amet, dicta iusto labore repudiandae. Excepturi, tempore impedit?</p>
-        <a href="https://github.com/SEU-USUARIO/SeuProjeto">l</a>
+    <h2>Projetos em Destaque</h2>
+
+    <!-- Projetos Principais -->
+    <div class="projetos-principais">
+
+        <a href="projetos/shopease.html" class="projeto-card grande">
+            <div class="projeto-imagem">
+                <img src="images/projeto_img_shopease.jpg" alt="ShopEase">
+            </div>
+            <div class="projeto-info">
+                <h3>ShopEase</h3>
+                <p>
+                    Aplicativo Android colaborativo para criação e gerenciamento
+                    de listas de compras em grupo, com autenticação e dados em tempo real.
+                </p>
+                <span>Android • Java • Firebase</span>
+            </div>
+        </a>
+
+        <a href="projetos/physicalmed.html" class="projeto-card grande">
+            <div class="projeto-imagem">
+                <img src="images/projeto_img_physicalmed.png" alt="ShopEase">
+            </div>
+            <div class="projeto-info">
+                <h3>Physical Med Management</h3>
+                <p>
+                    Sistema desktop para gestão de vendas, produtos, vendedores
+                    e estoque, com foco em dados e relatórios.
+                </p>
+                <span>Java • JavaFX • PostgreSQL</span>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Projetos Secundários -->
+    <div class="projetos-menores">
+
+        <a href="projetos/projeto1.html" class="projeto-card pequeno">
+            <img src="img/projeto1.png" alt="Projeto 1">
+            <h4>Projeto Java Desktop</h4>
+            <p>Sistema CRUD com foco em regras de negócio.</p>
+        </a>
+
+        <a href="projetos/projeto2.html" class="projeto-card pequeno">
+            <img src="img/projeto2.png" alt="Projeto 2">
+            <h4>App Android</h4>
+            <p>Aplicação mobile com autenticação e persistência.</p>
+        </a>
+
+        <a href="projetos/projeto3.html" class="projeto-card pequeno">
+            <img src="img/projeto3.png" alt="Projeto 3">
+            <h4>Controle de Estoque</h4>
+            <p>Gestão de produtos e movimentações.</p>
+        </a>
+
+        <a href="projetos/projeto4.html" class="projeto-card pequeno">
+            <img src="img/projeto4.png" alt="Projeto 4">
+            <h4>Projeto Acadêmico</h4>
+            <p>Aplicação Java com banco de dados.</p>
+        </a>
+
     </div>
 </section>
 
