@@ -601,4 +601,167 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
+/* =========================================================
+   PÁGINA DE DETALHES DO PROJETO
+   ========================================================= */
+
+.projeto-detalhe-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    text-decoration: underline;
+}
+
+/* Hero do Projeto */
+.projeto-hero h1 {
+    font-size: 3rem;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* Galeria */
+.projeto-galeria {
+    margin: 40px 0;
+}
+
+.imagem-destaque {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza se a imagem for menor que o container */
+}
+
+.imagem-destaque img {
+    width: 80%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover; 
+}
+
+/* Grid de Informações */
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .imagem-destaque img {
+        max-height: px; /* Limita a altura para não ocupar a tela toda */
+        width: 100%;      /* Mantém a largura preenchendo o container */
+        object-position: center top; /* Garante que o topo da imagem apareça (bom para prints de sistemas) */
+    }
+}
+
+.info-texto h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1e88e5;
+    margin-top: 30px;
+}
+
+.info-texto p {
+    line-height: 1.8;
+    color: #475569;
+}
+
+.info-texto ul {
+    padding-left: 20px;
+    color: #475569;
+}
+
+.info-texto li {
+    margin-bottom: 10px;
+}
+
+/* Card Lateral de Tech */
+.tech-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 16px;
+    position: sticky;
+    top: 100px;
+}
+
+.tech-card h4 {
+    margin-top: 0;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.lista-tech {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-tech li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.lista-tech i {
+    color: #1e88e5;
+}
+
+/* Botões de Link */
+.projeto-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn-link {
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-link.github {
+    background: #334155;
+    color: white;
+}
+
+.btn-link.demo {
+    background: #1e88e5;
+    color: white;
+}
+
+.btn-link:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
 
