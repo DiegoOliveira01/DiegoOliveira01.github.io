@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto: ShopEase - Diego Oliveira</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
@@ -101,6 +102,59 @@
         </div>
     </section>
 
+    <section class="projeto-galeria-detalhada">
+    <h2>Capturas do Projeto</h2>
+
+    <div class="galeria-grid">
+
+        <figure class="galeria-item">
+            <img src="/images/projeto_img_0_shopease.jpg" alt="Lista de compras compartilhada">
+            <figcaption>
+                Lista de compras sincronizada em tempo real entre usuários.
+            </figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+            <img src="/images/projeto_img_1_shopease.jpg" alt="Categorias de produtos">
+            <figcaption>
+                Grupos fechados para compartilhamento de compras.
+            </figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+            <img src="/images/projeto_img_2_shopease.jpg" alt="Tela de login">
+            <figcaption>
+                Adição de produtos ao carrinho de forma prática.
+            </figcaption>
+        </figure>
+
+    </div>
+</section>
+
+<section class="projeto-roadmap">
+    <h2>Atualizações Futuras</h2>
+
+    <p class="roadmap-descricao">
+        O ShopEase continua em evolução. Algumas melhorias planejadas para as próximas versões incluem:
+    </p>
+
+    <ul class="roadmap-lista">
+        <li>
+            <i class="fas fa-chart-pie"></i>
+            Relatórios econômicos gerais de compras
+        </li>
+        <li>
+            <i class="fas fa-paint-brush"></i>
+            Melhoria geral na experiência de UI/UX
+        </li>
+        <li>
+           <i class="fas fa-shopping-cart"></i>
+            Cálculo do valor médio do carrinho com base em compras anteriores
+        </li>
+    </ul>
+</section>
+
+
 </main>
 
 <footer id="contato" class="footer">
@@ -145,5 +199,38 @@
     </div>
 </footer>
 
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <p class="lightbox-caption"></p>
+</div>
+
 </body>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const lightboxCaption = document.querySelector(".lightbox-caption");
+const closeBtn = document.querySelector(".lightbox-close");
+
+document.querySelectorAll(".galeria-item img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.nextElementSibling?.textContent || "";
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
+
 </html>

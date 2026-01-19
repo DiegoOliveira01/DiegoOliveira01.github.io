@@ -501,6 +501,91 @@ h1, h2, h3 {
 }
 
 /* =========================================================
+   SEÇÃO: CONTATO
+   ========================================================= */
+
+.contato {
+    padding: 80px 20px;
+    background-color: #f4f6f8; /* mesmo padrão de alternância */
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 32px;
+    color: #1e88e5;
+    margin-bottom: 15px;
+}
+
+.contato p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Container dos links */
+.contato-links {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Links e botão base */
+.contato-links a,
+.contato-links button {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+/* Ícones */
+.contato-links i {
+    font-size: 1.3rem;
+    color: #1e88e5;
+    transition: color 0.3s;
+}
+
+/* Hover */
+.contato-links a:hover,
+.contato-links button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    color: #1e88e5;
+}
+
+/* Hover ícone */
+.contato-links a:hover i,
+.contato-links button:hover i {
+    color: #0f172a;
+}
+
+/* Email revelado */
+#email {
+    grid-column: 1 / -1;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* =========================================================
    FOOTER
    ========================================================= */
 
@@ -762,6 +847,150 @@ h1, h2, h3 {
 .btn-link:hover {
     opacity: 0.9;
     transform: translateY(-2px);
+}
+
+/* =========================================================
+   GALERIA DETALHADA DO PROJETO
+   ========================================================= */
+
+.projeto-galeria-detalhada {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.projeto-galeria-detalhada h2 {
+    font-size: 28px;
+    color: #1e88e5;
+    margin-bottom: 40px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.galeria-item {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;          /* Mantém proporção real */
+    object-fit: contain;   /* Nunca corta */
+    background-color: #f8fafc;
+    cursor: zoom-in;
+}
+
+.galeria-item figcaption {
+    padding: 15px;
+    font-size: 14px;
+    color: #475569;
+    background-color: #f8fafc;
+}
+
+/* =========================================================
+   ROADMAP / ATUALIZAÇÕES FUTURAS
+   ========================================================= */
+
+.projeto-roadmap {
+    margin: 100px 0;
+    padding: 50px 40px;
+    background: #f4f6f8;
+    border-radius: 20px;
+}
+
+.projeto-roadmap h2 {
+    font-size: 28px;
+    color: #1e88e5;
+    margin-bottom: 15px;
+}
+
+.roadmap-descricao {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.roadmap-lista {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.roadmap-lista li {
+    background: #ffffff;
+    padding: 18px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: #334155;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.roadmap-lista i {
+    color: #1e88e5;
+    font-size: 1.2rem;
+}
+
+/* =========================================================
+   LIGHTBOX - IMAGEM EM TELA CHEIA
+   ========================================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+    margin-top: 15px;
+    color: #e5e7eb;
+    font-size: 15px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 

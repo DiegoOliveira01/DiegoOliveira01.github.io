@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Oliveira - Desenvolvedor Java</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -130,6 +131,7 @@
     </div>
 </section>
 
+<!-- Área habilidades -->
 <section id="habilidades">
     <h2>Habilidades</h2>
     <p class="habilidades-subtitulo">
@@ -172,6 +174,7 @@
     </div>
 </section>
 
+<!-- Área formação -->
 <section id="formacao">
     <h2>Formação Acadêmica</h2>
     <p class="formacao-subtitulo">
@@ -204,8 +207,36 @@
     </div>
 </section>
 
+<!-- Contato -->
+<section id="contato" class="contato">
+    <h2>Contato</h2>
 
-<footer id="contato" class="footer">
+    <p>
+        Quer falar comigo?  
+        Me encontre no LinkedIn, GitHub ou revele meu e-mail abaixo.
+    </p>
+
+    <div class="contato-links">
+        <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <button id="mostrarEmail">
+            <i class="fas fa-envelope"></i> Ver e-mail
+        </button>
+
+        <span id="email" style="display:none;">
+            📧 Email@gmail.com
+        </span>
+    </div>
+</section>
+
+
+<footer id="" class="footer">
     <div class="footer-container">
 
         <!-- Info principal -->
@@ -249,5 +280,19 @@
 
 
 <script src="scroll.js"></script>
+
+<script>
+document.getElementById("mostrarEmail").addEventListener("click", function () {
+    const email = "diegofontes.002" + "@gmail.com";
+    const emailSpan = document.getElementById("email");
+
+    emailSpan.textContent = email;
+    emailSpan.style.display = "inline-block";
+
+    this.style.display = "none";
+});
+</script>
+
+
 </body>
 </html>
