@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto: ShopEase - Diego Oliveira</title>
+    <title>Projeto: Physical Med Management - Diego Oliveira</title>
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -33,20 +33,20 @@
     <section class="projeto-hero">
         <div class="hero-content">
             <a href="../index.html#projetos" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar aos projetos</a>
-            <h1>ShopEase</h1>
-            <p class="tagline">Gestão colaborativa de compras em tempo real.</p>
+            <h1>Physical Med Management</h1>
+            <p class="tagline">Sistema de gestão empresarial completa.</p>
             <div class="atuacao">
-                <span>Android</span>
+                <span>Desktop</span>
                 <span>Java</span>
-                <span>Firebase</span>
-                <span>NoSQL</span>
+                <span>PostgreSQL</span>
+                <span>JavaFX</span>
             </div>
         </div>
     </section>
 
     <section class="projeto-galeria">
         <div class="imagem-destaque">
-            <img src="../images/projeto_img_shopease.jpg" alt="Interface do ShopEase">
+            <img src="../images/projeto_img_physicalmed.png" alt="Physical logo">
         </div>
         </section>
 
@@ -56,55 +56,32 @@
             <div class="info-texto">
                 <h3><i class="fas fa-bullseye"></i> Propósito do Projeto</h3>
                 <p>
-                    A ShopEase nasceu da necessidade de organizar compras domésticas entre múltiplos usuários. 
-                    Muitas vezes, as pessoas compram itens repetidos ou esquecem de algo porque a comunicação 
-                    via mensagens é fragmentada. Este app centraliza a lista em tempo real. Ele esta disponível
-                    na Google Play Store 
-                </p>
-
-                <h3><i class="fas fa-lightbulb"></i> O que aprendi</h3>
-                <p>
-                    O desenvolvimento do ShopEase foi muito gratificante na minha evolução como desenvolvedor. 
-                    Durante o projeto, enfrentei desafios reais relacionados à <strong>sincronização de dados em tempo real</strong>, 
-                    concorrência e organização de código, o que me forçou a aprimorar significativamente minha 
-                    <strong>lógica em Java</strong> e minha capacidade de estruturar soluções escaláveis.
+                O <strong>Physical Med Management</strong> é um sistema desktop desenvolvido para atender às necessidades
+                operacionais de um <strong>quiosque localizado em shopping center</strong>, focado na venda de produtos
+                voltados à <strong>massagem, fisioterapia e bem-estar</strong>.
                 </p>
 
                 <p>
-                    Trabalhar com o <strong>Android</strong> me fez compreender melhor o ciclo de vida das Activities e
-                    <strong>arquitetura MVVM</strong> foi essencial para manter a aplicação organizada, facilitando testes, 
-                    manutenção e futuras evoluções.
+                O sistema centraliza a gestão do negócio, oferecendo controle eficiente de
+                <strong>estoque, vendas, produtos, usuários e formas de pagamento</strong>,
+                contribuindo para a redução de erros operacionais e maior organização do fluxo comercial.
                 </p>
 
                 <p>
-                    No uso do <strong>Firebase Realtime Database</strong>, aprendi a modelar dados de forma eficiente em um banco 
-                    <strong>NoSQL</strong>, pensando não apenas no armazenamento, mas também no desempenho das leituras e escritas. 
-                    Compreendi a importância de escutar eventos em tempo real, indicar estados de carregamento na interface 
-                    e evitar problemas comuns como atualizações redundantes ou inconsistências visuais.
-                </p>
-
-                <p>
-                    A integração com o <strong>Firebase Storage</strong> ampliou meu entendimento sobre upload, download e controle 
-                    de arquivos na nuvem, além de boas práticas de segurança e organização de dados por usuário. 
-                    Já com o uso do <strong>Firebase Functions</strong>, tive contato com lógica de backend serverless, 
-                    automatizando processos e reforçando regras de negócio que não deveriam ficar expostas no cliente.
-                </p>
-
-                <p>
-                    De forma geral, o projeto fortaleceu minha autonomia como desenvolvedor. Aprendi a pesquisar, 
-                    testar hipóteses, interpretar documentações oficiais e refatorar código sempre que necessário. 
-                    Mais do que implementar funcionalidades, passei a pensar em <strong>experiência do usuário, 
-                    performance, segurança e manutenção a longo prazo</strong>.
+                Por operar em um ambiente de alto fluxo de clientes, a aplicação prioriza
+                <strong>agilidade, estabilidade e usabilidade</strong>, permitindo que os atendentes realizem
+                operações de forma rápida e segura durante o atendimento presencial.
                 </p>
 
                 
                 <h3><i class="fas fa-check-circle"></i> Funcionalidades Chave</h3>
                 <ul>
-                    <li>Criação de listas compartilhadas com sistema de grupos fechados</li>
-                    <li>Atualização instantânea (Realtime) em todo o App</li>
-                    <li>Produtos separados em categorias e com sistema de busca</li>
-                    <li>Adição de produtos totalmente personalizados</li>
-                    <li>Sistema de notificação em tempo real</li>
+                    <li>Gerenciamento completo de produtos</li>
+                    <li>Controle de estoque com atualização automática após cada venda</li>
+                    <li>Registro e gerenciamento de vendas realizadas no quiosque</li>
+                    <li>Gerenciamento de usuários com diferentes níveis de acesso</li>
+                    <li>Cadastro e controle de formas de pagamento</li>
+                    <li>Painel administrativo centralizado para controle do negócio</li>
                 </ul>
             </div>
 
@@ -113,19 +90,14 @@
                     <h4>Tecnologias Utilizadas</h4>
                     <ul class="lista-tech">
                         <li><i class="fab fa-java"></i> Java (JDK 17)</li>
-                        <li><i class="fas fa-database"></i> Firebase Realtime DB</li>
-                        <li><i class="fas fa-database"></i> Firebase Storage</li>
-                        <li><i class="fas fa-database"></i> Firebase Functions</li>
-                        <li><i class="fas fa-user-shield"></i> Firebase Auth</li>
-                        <li><i class="fas fa-layer-group"></i> Arquitetura MVVM</li>
+                        <li><i class="fas fa-desktop"></i> JavaFX</li>
+                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        <li><i class="fas fa-layer-group"></i> Arquitetura em camadas (Controller, DAO, Model)</li>
                     </ul>
 
                     <div class="projeto-links">
-                        <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" class="btn-link github">
+                        <a href="https://github.com/DiegoOliveira01/PhysicalMedManagement" target="_blank" class="btn-link github">
                             <i class="fab fa-github"></i> Ver Código
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.appease.shopease" target="_blank" class="btn-link demo">
-                            <i class="fa-brands fa-google-play" style="color: #63E6BE;"></i> Baixar app na Play Store
                         </a>
                     </div>
                 </div>
@@ -140,23 +112,23 @@
     <div class="galeria-grid">
 
         <figure class="galeria-item">
-            <img src="/images/projeto_img_0_shopease.jpg" alt="Lista de compras compartilhada">
+            <img src="/images/projeto_img_0_physical.png" alt="Lista de compras compartilhada">
             <figcaption>
-                Lista de compras sincronizada em tempo real entre usuários.
+                Gerenciamento de venda com diversos filtros
             </figcaption>
         </figure>
 
         <figure class="galeria-item">
-            <img src="/images/projeto_img_1_shopease.jpg" alt="Categorias de produtos">
+            <img src="/images/projeto_img_1_physical.png" alt="Categorias de produtos">
             <figcaption>
-                Grupos fechados para compartilhamento de compras.
+                Formas de pagamento que facilitam a visão de custos de operação
             </figcaption>
         </figure>
 
         <figure class="galeria-item">
-            <img src="/images/projeto_img_2_shopease.jpg" alt="Tela de login">
+            <img src="/images/projeto_img_2_physical.png" alt="Tela de login">
             <figcaption>
-                Adição de produtos ao carrinho de forma prática.
+                Produtos altamente configuraveis com imagem para fácil identificação
             </figcaption>
         </figure>
 
@@ -167,24 +139,26 @@
     <h2>Atualizações Futuras</h2>
 
     <p class="roadmap-descricao">
-        A ShopEase continua em evolução. Algumas melhorias planejadas para as próximas versões incluem:
+        O Physical Med Management está em constante evolução, com foco em ampliar
+        o controle e a análise do desempenho do negócio.
     </p>
 
     <ul class="roadmap-lista">
         <li>
-            <i class="fas fa-chart-pie"></i>
-            Relatórios econômicos gerais de compras
+            <i class="fas fa-chart-line"></i>
+            Implementação de relatórios detalhados de vendas e faturamento com possibilidade de exportação para PDF
+        </li>
+        <li>
+            <i class="fas fa-boxes"></i>
+            Sistema de notificação por Email de vendas ou baixo estoque de produtos
         </li>
         <li>
             <i class="fas fa-paint-brush"></i>
-            Melhoria geral na experiência de UI/UX
-        </li>
-        <li>
-           <i class="fas fa-shopping-cart"></i>
-            Cálculo do valor médio do carrinho com base em compras anteriores
+            Aprimoramentos contínuos na usabilidade e experiência do usuário
         </li>
     </ul>
 </section>
+
 
 
 </main>
