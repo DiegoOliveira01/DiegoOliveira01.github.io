@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Sistema de Gerenciamento de Usuários – API REST Spring Boot - Diego Oliveira</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../index.html">Diego Oliveira</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="../index.html#perfil">Sobre</a></li>
+                <li><a href="../index.html#projetos">Projetos</a></li>
+                <li><a href="../index.html#habilidades">Habilidades</a></li>
+                <li><a href="../index.html#formacao">Formação</a></li>
+                <li><a href="../index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="projeto-detalhe-container">
+    
+    <section class="projeto-hero">
+        <div class="hero-content">
+            <a href="../index.html#projetos" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar aos projetos</a>
+            <h1>Sistema de Gerenciamento de Usuários – API REST Spring Boot</h1>
+            <p class="tagline">API REST CRUD desenvolvida em Java com Spring Boot</p>
+            <div class="atuacao">
+                <span>Backend</span>
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>API REST</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="projeto-galeria">
+        <div class="imagem-destaque">
+            <img src="../images/projeto-spring.jpg" alt="API REST desenvolvida com Spring Boot">
+        </div>
+        </section>
+
+    <section class="projeto-info-detalhada">
+        <div class="info-grid">
+            
+            <div class="info-texto">
+                <h3><i class="fas fa-bullseye"></i> Propósito do Projeto</h3>
+                <p>
+                O <strong>Sistema de Gerenciamento de Usuários</strong> é uma API REST desenvolvida em 
+                <strong>Java utilizando Spring Boot</strong> com o objetivo de gerenciar registros de usuários
+                em uma aplicação backend.
+                </p>
+
+                <p>
+                A API permite realizar operações completas de <strong>CRUD (Create, Read, Update e Delete)</strong>,
+                possibilitando o cadastro, consulta, atualização e remoção de usuários através de endpoints REST.
+                </p>
+
+                <p>
+                O projeto foi estruturado seguindo uma <strong>arquitetura em camadas</strong>, separando
+                as responsabilidades entre Controller, Service e Repository, facilitando manutenção,
+                organização do código e escalabilidade da aplicação.
+                </p>
+
+                
+                <h3><i class="fas fa-check-circle"></i> Funcionalidades Chave</h3>
+                <ul>
+                    <li>Cadastro de novos usuários na base de dados</li>
+                    <li>Consulta de usuários através do email</li>
+                    <li>Atualização de dados de usuários existentes</li>
+                    <li>Remoção de usuários cadastrados</li>
+                    <li>Integração com banco de dados relacional</li>
+                    <li>API estruturada em arquitetura em camadas</li>
+                </ul>
+            </div>
+
+            <div class="info-tecnica">
+                <div class="tech-card">
+                    <h4>Tecnologias Utilizadas</h4>
+                    <ul class="lista-tech">
+                        <li><i class="fab fa-java"></i> Java (JDK 17)</li>
+                        <li><i class="fas fa-leaf"></i> Spring Boot</li>
+                        <li><i class="fas fa-network-wired"></i> Spring Web</li>
+                        <li><i class="fas fa-database"></i> Spring Data JPA</li>
+                        <li><i class="fas fa-layer-group"></i> Arquitetura em camadas (Controller, Service, Repository)</li>
+                    </ul>
+
+                    <div class="projeto-links">
+                        <a href="https://github.com/DiegoOliveira01/Sistema-de-Gerenciamento-de-Usuarios-API-REST-Spring-Boot" target="_blank" class="btn-link github">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <h3><i class="fa-solid fa-code"></i> Controller</h3>
+
+    <pre><code class="language-java">
+    import com.diego.gerenciamento_usuario.business.UsuarioService;
+    import com.diego.gerenciamento_usuario.infrastructure.entitys.Usuario;
+    import jakarta.persistence.criteria.CriteriaBuilder;
+    import lombok.RequiredArgsConstructor;
+    import org.springframework.http.RequestEntity;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.*;
+
+    @RestController
+    @RequestMapping("/usuario")
+    @RequiredArgsConstructor
+    public class UsuarioController {
+
+        private final UsuarioService usuarioService;
+
+        @PostMapping
+        public ResponseEntity<Void> salvarUsuario(@RequestBody Usuario usuario){
+            usuarioService.salvarUsuario(usuario);
+            return ResponseEntity.ok().build();
+        }
+
+        @GetMapping
+        public ResponseEntity<Usuario> buscarUsuarioPorEmail(@RequestParam String email){
+            return ResponseEntity.ok(usuarioService.buscarUsuarioPorEmail(email));
+        }
+
+        @DeleteMapping
+        public ResponseEntity<Void> deletarUsuarioPorEmail(@RequestParam String email){
+            usuarioService.deletarUsuarioPorEmail(email);
+            return ResponseEntity.ok().build();
+        }
+
+        @PutMapping
+        public ResponseEntity<Void> atualizarUsuarioPorId(@RequestParam Integer id, @RequestBody Usuario usuario){
+
+            usuarioService.atualizarUsuarioPorId(id, usuario);
+            return ResponseEntity.ok().build();
+        }
+
+    }
+    </code></pre>
+
+    <h3><i class="fa-solid fa-code"></i> Estrutura do projeto</h3>
+    <pre><code class="language-java">
+
+        src
+        ├── main
+        │   ├── java
+        │   │   └── com
+        │   │       └── diego
+        │   │           └── gerenciamento_usuario
+        │   │               ├── GerenciamentoUsuarioApplication.java
+        │   │               │
+        │   │               ├── business
+        │   │               │   └── UsuarioService.java
+        │   │               │
+        │   │               ├── controller
+        │   │               │   └── UsuarioController.java
+        │   │               │
+        │   │               └── infrastructure
+        │   │                   ├── entitys
+        │   │                   │   └── Usuario.java
+        │   │                   │
+        │   │                   └── repository
+        │   │                       └── UsuarioRepository.java
+        │   │
+        │   └── resources
+        │       ├── application.properties
+        │       ├── static
+        │       └── templates
+
+    </code></pre>
+
+<section class="projeto-roadmap">
+    <h2>Atualizações Futuras</h2>
+
+    <p class="roadmap-descricao">
+        A API de Gerenciamento de Usuários poderá evoluir com novas funcionalidades voltadas para segurança, validação de dados e melhor padronização das respostas da API.
+    </p>
+
+    <ul class="roadmap-lista">
+        <li>
+        <i class="fas fa-user-shield"></i>
+        Implementação de autenticação e autorização utilizando Spring Security
+        </li>
+        <li>
+        <i class="fas fa-exchange-alt"></i>
+        Padronização das respostas da API utilizando DTOs
+        </li>
+        <li>
+        <i class="fas fa-book"></i>
+        Documentação da API utilizando Swagger / OpenAPI
+        </li>
+    </ul>
+</section>
+
+
+
+</main>
+
+<footer id="contato" class="footer">
+    <div class="footer-container">
+
+        <!-- Info principal -->
+        <div class="footer-brand">
+            <h3>Diego Oliveira</h3>
+            <p>Desenvolvedor Java Back-End</p>
+        </div>
+
+        <!-- Navegação rápida -->
+        <div class="footer-nav">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#perfil">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="footer-social">
+    <h4>Conecte-se</h4>
+
+    <div class="social-links icons">
+        <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            GitHub
+        </a>
+    </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Diego Oliveira</p>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <p class="lightbox-caption"></p>
+</div>
+
+</body>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const lightboxCaption = document.querySelector(".lightbox-caption");
+const closeBtn = document.querySelector(".lightbox-close");
+
+document.querySelectorAll(".galeria-item img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.nextElementSibling?.textContent || "";
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
+
+</html>
