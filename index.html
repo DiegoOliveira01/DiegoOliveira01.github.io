@@ -43,22 +43,24 @@
         </div>
 
         <div class="perfil-info">
-            <h2>Desenvolvedor Java Back-End</h2>
+            <h2>Desenvolvedor Full Stack Java (Spring Boot + Angular)</h2>
 
             <p>
-                Olá. Sou desenvolvedor Java com foco em aplicações back-end,
-                criando soluções robustas, organizadas e escaláveis.
-                Tenho experiência no desenvolvimento de sistemas desktop
-                e Android, trabalhando com regras de negócio, banco de dados
-                e integração entre camadas.
+                Olá. Sou desenvolvedor Full Stack especializado em aplicações web utilizando 
+                Spring Boot no back-end e Angular no front-end.
+
+                Experiência na construção de APIs seguras com autenticação JWT, 
+                integração entre serviços e desenvolvimento de interfaces modernas 
+                e responsivas.
             </p>
 
             <div class="atuacao">
                 <span>Java</span>
-                <span>Android (Java)</span>
-                <span>Aplicações Desktop</span>
-                <span>PostgreSQL & Firebase</span>
-                <span>Aplicações Multiusuário</span>
+                <span>Spring Boot</span>
+                <span>Angular</span>
+                <span>JWT & Spring Security</span>
+                <span>REST APIs</span>
+                <span>PostgreSQL</span>
             </div>
         </div>
 
@@ -71,17 +73,18 @@
     <!-- Projetos Principais -->
     <div class="projetos-principais">
 
-        <a href="projetos/shopease.html" class="projeto-card grande">
+        <a href="projetos/cashpilot.html" class="projeto-card grande">
             <div class="projeto-imagem">
-                <img src="images/projeto_img_shopease.jpg" alt="ShopEase">
+                <img src="images/projeto_img_cashpilot.png" alt="Cash Pilot">
             </div>
             <div class="projeto-info">
-                <h3>ShopEase</h3>
+                <h3>Cash Pilot</h3>
                 <p>
-                    Aplicativo Android colaborativo para criação e gerenciamento
-                    de listas de compras em grupo, com autenticação e dados em tempo real.
+                    Sistema de gerenciamento financeiro com autenticação JWT, desenvolvido com 
+                    Spring Boot no back-end e Angular no front-end. Possui integração completa 
+                    entre API REST e interface, com controle de acesso e estrutura escalável.
                 </p>
-                <span>Android • Java • Firebase</span>
+                <span>Spring Boot • Angular • JWT • PostgreSQL</span>
             </div>
         </a>
 
@@ -110,10 +113,11 @@
             <p>API CRUD desenvolvida em Java utilizando Spring Boot.</p>
         </a>
 
-        <a href="projetos/projeto2.html" class="projeto-card pequeno">
-            <img src="images/template_projeto.png" alt="Projeto 2">
-            <h4>App Android</h4>
-            <p>Aplicação mobile com autenticação e persistência.</p>
+        <a href="projetos/shopease.html" class="projeto-card pequeno">
+            <img src="images/projeto_img_shopease.jpg" alt="Projeto 2">
+            <h4>ShopEase - App Android</h4>
+            <p>Aplicativo Android colaborativo para criação e gerenciamento
+               de listas de compras em grupo</p>
         </a>
 
         <a href="projetos/projeto3.html" class="projeto-card pequeno">
@@ -146,13 +150,11 @@
         <div class="habilidade-card">
             <h3>Hard Skills</h3>
             <ul>
-                <li>Java (POO, boas práticas)</li>
-                <li>JavaFX (Desktop)</li>
-                <li>Android (Java)</li>
-                <li>PostgreSQL / MySQL</li>
-                <li>Firebase (Auth / Realtime Database / Storage)</li>
-                <li>Arquitetura em camadas</li>
-                <li>CRUD e regras de negócio</li>
+                <li>Spring Boot (REST APIs, Spring Security, JWT)</li>
+                <li>Angular (Standalone Components, Routing, Interceptors, Guards)</li>
+                <li>Integração Frontend ↔ Backend (HTTP, JSON, CORS)</li>
+                <li>Banco de dados (PostgreSQL, modelagem relacional e não relacional)</li>
+                <li>Autenticação e autorização (JWT)</li>
                 <li>Git e versionamento</li>
             </ul>
         </div>
@@ -242,7 +244,7 @@
         <!-- Info principal -->
         <div class="footer-brand">
             <h3>Diego Oliveira</h3>
-            <p>Desenvolvedor Java Back-End</p>
+            <p>Desenvolvedor Full Stack Java</p>
         </div>
 
         <!-- Navegação rápida -->
@@ -290,6 +292,9 @@ document.getElementById("mostrarEmail").addEventListener("click", function () {
     emailSpan.style.display = "inline-block";
 
     this.style.display = "none";
+
+    navigator.clipboard.writeText(email);
+    alert("E-mail copiado para a área de transferência!");
 });
 </script>
 

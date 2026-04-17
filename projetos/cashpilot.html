@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Cash Pilot - Diego Oliveira</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="../index.html">Diego Oliveira</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="../index.html#perfil">Sobre</a></li>
+                <li><a href="../index.html#projetos">Projetos</a></li>
+                <li><a href="../index.html#habilidades">Habilidades</a></li>
+                <li><a href="../index.html#formacao">Formação</a></li>
+                <li><a href="../index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="projeto-detalhe-container">
+    
+    <section class="projeto-hero">
+        <div class="hero-content">
+            <a href="../index.html#projetos" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar aos projetos</a>
+            <h1>Cash Pilot</h1>
+            <p class="tagline">Sistema de gerenciamento financeiro com arquitetura full stack.</p>
+            <div class="atuacao">
+                <span>Angular</span>
+                <span>Spring Boot</span>
+                <span>JWT</span>
+                <span>PostgreSQL</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="projeto-galeria">
+        <div class="imagem-destaque">
+            <img src="../images/projeto_img_cashpilot.png" alt="Physical logo">
+        </div>
+        </section>
+
+    <section class="projeto-info-detalhada">
+        <div class="info-grid">
+            
+            <div class="info-texto">
+                <h3><i class="fas fa-bullseye"></i> Propósito do Projeto</h3>
+                <p>
+                O <strong>Cash Pilot</strong> é uma aplicação web full stack desenvolvida para gerenciamento financeiro pessoal, 
+                com foco em organização, controle de gastos e segurança dos dados do usuário.
+                </p>
+
+                <p>
+                A aplicação utiliza uma arquitetura desacoplada, com <strong>backend em Spring Boot</strong> responsável pela 
+                exposição de uma API REST segura, e <strong>frontend em Angular</strong> consumindo esses dados de forma dinâmica.
+                </p>
+
+                <p>
+                O sistema implementa <strong>autenticação baseada em JWT</strong>, garantindo controle de acesso às rotas e proteção 
+                das informações do usuário, seguindo boas práticas utilizadas em aplicações reais de mercado.
+                </p>
+                
+                <h3><i class="fas fa-check-circle"></i> Funcionalidades Chave</h3>
+                <ul>
+                    <li>Autenticação de usuários com JWT</li>
+                    <li>Login seguro com validação de credenciais</li>
+                    <li>Proteção de rotas no frontend com Auth Guard</li>
+                    <li>Interceptação automática de requisições HTTP com token</li>
+                    <li>Integração completa entre frontend (Angular) e backend (Spring Boot)</li>
+                    <li>Estrutura preparada para expansão de funcionalidades financeiras</li>
+                </ul>
+            </div>
+
+            <div class="info-tecnica">
+                <div class="tech-card">
+                    <h4>Tecnologias Utilizadas</h4>
+                    <ul class="lista-tech">
+                        <li><i class="fab fa-java"></i> Java (Spring Boot)</li>
+                        <li><i class="fas fa-lock"></i> Spring Security + JWT</li>
+                        <li><i class="fab fa-angular"></i> Angular (Standalone Components)</li>
+                        <li><i class="fas fa-exchange-alt"></i> REST API</li>
+                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        <li><i class="fas fa-code-branch"></i> Git</li>
+                    </ul>
+
+                    <div class="projeto-links">
+                        <a href="https://github.com/DiegoOliveira01/cashpilot-backend" target="_blank" class="btn-link github">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="projeto-galeria-detalhada">
+    <h2>Capturas do Projeto</h2>
+
+    <div class="galeria-grid">
+
+        <figure class="galeria-item">
+            <img src="/images/projeto_img_0_physical.png" alt="Lista de compras compartilhada">
+            <figcaption>
+                Gerenciamento de venda com diversos filtros
+            </figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+            <img src="/images/projeto_img_1_physical.png" alt="Categorias de produtos">
+            <figcaption>
+                Formas de pagamento que facilitam a visão de custos de operação
+            </figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+            <img src="/images/projeto_img_2_physical.png" alt="Tela de login">
+            <figcaption>
+                Produtos altamente configuraveis com imagem para fácil identificação
+            </figcaption>
+        </figure>
+
+    </div>
+</section>
+
+<section class="projeto-roadmap">
+    <h2>Atualizações Futuras</h2>
+
+    <p class="roadmap-descricao">
+        O Physical Med Management está em constante evolução, com foco em ampliar
+        o controle e a análise do desempenho do negócio.
+    </p>
+
+    <ul class="roadmap-lista">
+        <li>
+            <i class="fas fa-chart-line"></i>
+            Implementação de relatórios detalhados de vendas e faturamento com possibilidade de exportação para PDF
+        </li>
+        <li>
+            <i class="fas fa-boxes"></i>
+            Sistema de notificação por Email de vendas ou baixo estoque de produtos
+        </li>
+        <li>
+            <i class="fas fa-paint-brush"></i>
+            Aprimoramentos contínuos na usabilidade e experiência do usuário
+        </li>
+    </ul>
+</section>
+
+
+
+</main>
+
+<footer id="contato" class="footer">
+    <div class="footer-container">
+
+        <!-- Info principal -->
+        <div class="footer-brand">
+            <h3>Diego Oliveira</h3>
+            <p>Desenvolvedor Full Stack Java</p>
+        </div>
+
+        <!-- Navegação rápida -->
+        <div class="footer-nav">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#perfil">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="footer-social">
+    <h4>Conecte-se</h4>
+
+    <div class="social-links icons">
+        <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            GitHub
+        </a>
+    </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Diego Oliveira</p>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <p class="lightbox-caption"></p>
+</div>
+
+</body>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const lightboxCaption = document.querySelector(".lightbox-caption");
+const closeBtn = document.querySelector(".lightbox-close");
+
+document.querySelectorAll(".galeria-item img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.nextElementSibling?.textContent || "";
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
+
+</html>
