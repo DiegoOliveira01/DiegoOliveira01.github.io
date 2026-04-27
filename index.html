@@ -14,13 +14,9 @@
 <!-- Header -->
 <header class="header">
     <div class="header-container">
-
-        <!-- Logo / Nome -->
         <div class="logo">
             <a href="#perfil">Diego Oliveira</a>
         </div>
-
-        <!-- Navegação -->
         <nav class="nav">
             <ul class="nav-list">
                 <li><a href="#perfil">Sobre</a></li>
@@ -30,11 +26,10 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-
     </div>
 </header>
 
-<!-- Área Perfil -->
+<!-- Perfil -->
 <section id="perfil">
     <div class="perfil-container">
 
@@ -46,12 +41,14 @@
             <h2>Desenvolvedor Full Stack Java (Spring Boot + Angular)</h2>
 
             <p>
-                Olá. Sou desenvolvedor Full Stack especializado em aplicações web utilizando 
-                Spring Boot no back-end e Angular no front-end.
-
-                Experiência na construção de APIs seguras com autenticação JWT, 
-                integração entre serviços e desenvolvimento de interfaces modernas 
-                e responsivas.
+                Olá! Sou desenvolvedor Full Stack especializado em aplicações web com
+                <strong>Spring Boot</strong> no back-end e <strong>Angular</strong> no front-end.
+                Tenho experiência na construção de APIs REST seguras com autenticação JWT,
+                integração entre serviços e desenvolvimento de interfaces modernas e responsivas.
+            </p>
+            <p>
+                Atualmente com projeto em produção: o <strong>Cash Pilot</strong>, um sistema
+                completo de gerenciamento financeiro pessoal com deploy no Railway e Vercel.
             </p>
 
             <div class="atuacao">
@@ -61,12 +58,14 @@
                 <span>JWT & Spring Security</span>
                 <span>REST APIs</span>
                 <span>PostgreSQL</span>
+                <span>Tailwind CSS</span>
             </div>
         </div>
 
     </div>
 </section>
 
+<!-- Projetos -->
 <section id="projetos">
     <h2>Projetos em Destaque</h2>
 
@@ -80,17 +79,17 @@
             <div class="projeto-info">
                 <h3>Cash Pilot</h3>
                 <p>
-                    Sistema de gerenciamento financeiro com autenticação JWT, desenvolvido com 
-                    Spring Boot no back-end e Angular no front-end. Possui integração completa 
-                    entre API REST e interface, com controle de acesso e estrutura escalável.
+                    Sistema completo de gerenciamento de finanças pessoais com autenticação JWT,
+                    CRUD de transações, resumo financeiro em tempo real e deploy em produção.
+                    Backend em Spring Boot (Railway) e frontend em Angular com Tailwind CSS (Vercel).
                 </p>
-                <span>Spring Boot • Angular • JWT • PostgreSQL</span>
+                <span>Spring Boot • Angular • JWT • PostgreSQL • Tailwind CSS • Railway • Vercel</span>
             </div>
         </a>
 
         <a href="projetos/physicalMed.html" class="projeto-card grande">
             <div class="projeto-imagem">
-                <img src="images/projeto_img_physicalmed.png" alt="ShopEase">
+                <img src="images/projeto_img_physicalmed.png" alt="Physical Med Management">
             </div>
             <div class="projeto-info">
                 <h3>Physical Med Management</h3>
@@ -108,58 +107,47 @@
     <div class="projetos-menores">
 
         <a href="projetos/gerenciamentoUsuario.html" class="projeto-card pequeno">
-            <img src="images/projeto-spring.jpg" alt="Projeto 1">
+            <img src="images/projeto-spring.jpg" alt="API REST Spring Boot">
             <h4>API REST com Spring Boot</h4>
             <p>API CRUD desenvolvida em Java utilizando Spring Boot.</p>
         </a>
 
         <a href="projetos/shopease.html" class="projeto-card pequeno">
-            <img src="images/projeto_img_shopease.jpg" alt="Projeto 2">
+            <img src="images/projeto_img_shopease.jpg" alt="ShopEase">
             <h4>ShopEase - App Android</h4>
             <p>Aplicativo Android colaborativo para criação e gerenciamento
-               de listas de compras em grupo</p>
-        </a>
-
-        <a href="projetos/projeto3.html" class="projeto-card pequeno">
-            <img src="images/template_projeto.png" alt="Projeto 3">
-            <h4>Controle de Estoque</h4>
-            <p>Gestão de produtos e movimentações.</p>
-        </a>
-
-        <a href="projetos/projeto4.html" class="projeto-card pequeno">
-            <img src="images/template_projeto.png" alt="Projeto 4">
-            <h4>Projeto Acadêmico</h4>
-            <p>Aplicação Java com banco de dados.</p>
+               de listas de compras em grupo.</p>
         </a>
 
     </div>
 </section>
 
-<!-- Área habilidades -->
+<!-- Habilidades -->
 <section id="habilidades">
     <h2>Habilidades</h2>
     <p class="habilidades-subtitulo">
         Competências técnicas e comportamentais aplicadas no desenvolvimento de software,
-    <strong>todas já utilizadas em projetos reais, acadêmicos ou pessoais</strong>, com foco em soluções
-    funcionais, organizadas e escaláveis.
+        <strong>todas já utilizadas em projetos reais, acadêmicos ou pessoais</strong>,
+        com foco em soluções funcionais, organizadas e escaláveis.
     </p>
 
     <div class="habilidades-container">
 
-        <!-- HARD SKILLS -->
         <div class="habilidade-card">
             <h3>Hard Skills</h3>
             <ul>
                 <li>Spring Boot (REST APIs, Spring Security, JWT)</li>
-                <li>Angular (Standalone Components, Routing, Interceptors, Guards)</li>
+                <li>Angular (Standalone Components, Signals, Routing, Interceptors, Guards)</li>
+                <li>Tailwind CSS (estilização utilitária, tema escuro)</li>
                 <li>Integração Frontend ↔ Backend (HTTP, JSON, CORS)</li>
-                <li>Banco de dados (PostgreSQL, modelagem relacional e não relacional)</li>
-                <li>Autenticação e autorização (JWT)</li>
+                <li>Banco de dados (PostgreSQL, modelagem relacional)</li>
+                <li>Autenticação e autorização (JWT + BCrypt)</li>
+                <li>Deploy em nuvem (Railway, Vercel)</li>
                 <li>Git e versionamento</li>
+                <li>Documentação de API (Swagger / OpenAPI)</li>
             </ul>
         </div>
 
-        <!-- SOFT SKILLS -->
         <div class="habilidade-card soft">
             <h3>Soft Skills</h3>
             <ul>
@@ -176,7 +164,7 @@
     </div>
 </section>
 
-<!-- Área formação -->
+<!-- Formação -->
 <section id="formacao">
     <h2>Formação Acadêmica</h2>
     <p class="formacao-subtitulo">
@@ -189,7 +177,7 @@
         <div class="formacao-card">
             <h3>Ciência da Computação</h3>
             <span class="formacao-instituicao">
-                Faculdade Estacio de Sá • Bacharelado • Conclusão em 2025.2
+                Faculdade Estácio de Sá • Bacharelado • Conclusão em 2025.2
             </span>
 
             <p>
@@ -214,7 +202,7 @@
     <h2>Contato</h2>
 
     <p>
-        Quer falar comigo?  
+        Quer falar comigo?
         Me encontre no LinkedIn, GitHub ou revele meu e-mail abaixo.
     </p>
 
@@ -231,23 +219,19 @@
             <i class="fas fa-envelope"></i> Ver e-mail
         </button>
 
-        <span id="email" style="display:none;">
-            📧 Email@gmail.com
-        </span>
+        <span id="email" style="display:none;"></span>
     </div>
 </section>
 
-
-<footer id="" class="footer">
+<!-- Footer -->
+<footer class="footer">
     <div class="footer-container">
 
-        <!-- Info principal -->
         <div class="footer-brand">
             <h3>Diego Oliveira</h3>
             <p>Desenvolvedor Full Stack Java</p>
         </div>
 
-        <!-- Navegação rápida -->
         <div class="footer-nav">
             <h4>Navegação</h4>
             <ul>
@@ -258,28 +242,26 @@
             </ul>
         </div>
 
-        <!-- Redes sociais -->
         <div class="footer-social">
-    <h4>Conecte-se</h4>
+            <h4>Conecte-se</h4>
+            <div class="social-links icons">
+                <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
 
-    <div class="social-links icons">
-        <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-            LinkedIn
-        </a>
-
-        <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-            GitHub
-        </a>
-    </div>
     </div>
 
     <div class="footer-bottom">
-        <p>© 2025 Diego Oliveira</p>
+        <p>© 2026 Diego Oliveira</p>
     </div>
 </footer>
-
 
 <script src="scroll.js"></script>
 
@@ -297,7 +279,6 @@ document.getElementById("mostrarEmail").addEventListener("click", function () {
     alert("E-mail copiado para a área de transferência!");
 });
 </script>
-
 
 </body>
 </html>

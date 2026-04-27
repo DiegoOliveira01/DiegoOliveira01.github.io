@@ -29,73 +29,111 @@
 </header>
 
 <main class="projeto-detalhe-container">
-    
+
+    <!-- Hero -->
     <section class="projeto-hero">
         <div class="hero-content">
-            <a href="../index.html#projetos" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar aos projetos</a>
+            <a href="../index.html#projetos" class="btn-voltar">
+                <i class="fas fa-arrow-left"></i> Voltar aos projetos
+            </a>
             <h1>Cash Pilot</h1>
-            <p class="tagline">Sistema de gerenciamento financeiro com arquitetura full stack.</p>
+            <p class="tagline">Sistema de gerenciamento de finanças pessoais com arquitetura full stack.</p>
             <div class="atuacao">
                 <span>Angular</span>
                 <span>Spring Boot</span>
                 <span>JWT</span>
                 <span>PostgreSQL</span>
+                <span>Tailwind CSS</span>
+                <span>Railway</span>
+                <span>Vercel</span>
             </div>
         </div>
     </section>
 
+    <!-- Imagem destaque -->
     <section class="projeto-galeria">
         <div class="imagem-destaque">
-            <img src="../images/projeto_img_cashpilot.png" alt="Physical logo">
+            <img src="../images/cashpilot_dashboard.png" alt="Dashboard do Cash Pilot">
         </div>
-        </section>
+    </section>
 
+    <!-- Info detalhada -->
     <section class="projeto-info-detalhada">
         <div class="info-grid">
-            
+
             <div class="info-texto">
                 <h3><i class="fas fa-bullseye"></i> Propósito do Projeto</h3>
                 <p>
-                O <strong>Cash Pilot</strong> é uma aplicação web full stack desenvolvida para gerenciamento financeiro pessoal, 
-                com foco em organização, controle de gastos e segurança dos dados do usuário.
+                    O <strong>Cash Pilot</strong> é uma aplicação web full stack desenvolvida para gerenciamento
+                    de finanças pessoais, com foco em controle de receitas, despesas e saldo em tempo real.
+                </p>
+                <p>
+                    A arquitetura é desacoplada: o <strong>backend em Spring Boot</strong> expõe uma API REST
+                    segura hospedada no Railway, enquanto o <strong>frontend em Angular</strong> consome esses
+                    dados de forma reativa, hospedado no Vercel.
+                </p>
+                <p>
+                    O sistema implementa <strong>autenticação baseada em JWT</strong> com Spring Security,
+                    garantindo controle de acesso às rotas e proteção das informações do usuário, seguindo
+                    boas práticas utilizadas em aplicações reais de mercado.
                 </p>
 
-                <p>
-                A aplicação utiliza uma arquitetura desacoplada, com <strong>backend em Spring Boot</strong> responsável pela 
-                exposição de uma API REST segura, e <strong>frontend em Angular</strong> consumindo esses dados de forma dinâmica.
-                </p>
-
-                <p>
-                O sistema implementa <strong>autenticação baseada em JWT</strong>, garantindo controle de acesso às rotas e proteção 
-                das informações do usuário, seguindo boas práticas utilizadas em aplicações reais de mercado.
-                </p>
-                
-                <h3><i class="fas fa-check-circle"></i> Funcionalidades Chave</h3>
+                <h3><i class="fas fa-check-circle"></i> Funcionalidades</h3>
                 <ul>
-                    <li>Autenticação de usuários com JWT</li>
-                    <li>Login seguro com validação de credenciais</li>
+                    <li>Cadastro e autenticação de usuários com JWT</li>
+                    <li>Login seguro com validação de credenciais e BCrypt</li>
+                    <li>CRUD completo de transações financeiras</li>
+                    <li>Classificação por tipo: Receita (INCOME) e Despesa (EXPENSE)</li>
+                    <li>Resumo financeiro: total de receitas, despesas e saldo</li>
                     <li>Proteção de rotas no frontend com Auth Guard</li>
-                    <li>Interceptação automática de requisições HTTP com token</li>
-                    <li>Integração completa entre frontend (Angular) e backend (Spring Boot)</li>
-                    <li>Estrutura preparada para expansão de funcionalidades financeiras</li>
+                    <li>Interceptação automática de requisições HTTP com token JWT</li>
+                    <li>Feedback visual com toast notifications</li>
+                    <li>Tratamento global de erros HTTP com interceptor</li>
+                    <li>Documentação interativa da API com Swagger UI</li>
+                    <li>Deploy completo em nuvem (Railway + Vercel)</li>
                 </ul>
+
+                <h3><i class="fas fa-layer-group"></i> Arquitetura</h3>
+                <p>
+                    O backend segue o padrão de camadas <strong>Controller → Service → Repository</strong>,
+                    com DTOs para transferência de dados e separação clara de responsabilidades.
+                    O frontend é organizado em <strong>features, core e shared</strong>, com serviços
+                    isolados, interceptors globais e signals para gerenciamento de estado reativo.
+                </p>
             </div>
 
+            <!-- Card lateral -->
             <div class="info-tecnica">
                 <div class="tech-card">
-                    <h4>Tecnologias Utilizadas</h4>
+                    <h4>Tecnologias</h4>
                     <ul class="lista-tech">
-                        <li><i class="fab fa-java"></i> Java (Spring Boot)</li>
+                        <li><i class="fab fa-java"></i> Java 21</li>
+                        <li><i class="fas fa-leaf"></i> Spring Boot 3.4</li>
                         <li><i class="fas fa-lock"></i> Spring Security + JWT</li>
-                        <li><i class="fab fa-angular"></i> Angular (Standalone Components)</li>
-                        <li><i class="fas fa-exchange-alt"></i> REST API</li>
                         <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        <li><i class="fab fa-angular"></i> Angular 17</li>
+                        <li><i class="fas fa-paint-brush"></i> Tailwind CSS 3</li>
+                        <li><i class="fas fa-exchange-alt"></i> REST API</li>
+                        <li><i class="fas fa-file-alt"></i> Swagger / OpenAPI</li>
+                        <li><i class="fas fa-cloud"></i> Railway + Vercel</li>
                         <li><i class="fas fa-code-branch"></i> Git</li>
                     </ul>
 
                     <div class="projeto-links">
+                        <a href="https://cashpilot-frontend.vercel.app" target="_blank" class="btn-link demo">
+                            <i class="fas fa-globe"></i> Ver Demo ao Vivo
+                        </a>
+                        <a href="https://github.com/DiegoOliveira01/cashpilot-frontend" target="_blank" class="btn-link github">
+                            <i class="fab fa-github"></i> Frontend — GitHub
+                        </a>
                         <a href="https://github.com/DiegoOliveira01/cashpilot-backend" target="_blank" class="btn-link github">
-                            <i class="fab fa-github"></i> Ver Código
+                            <i class="fab fa-github"></i> Backend — GitHub
+                        </a>
+                        <a href="https://cashpilot-backend-production.up.railway.app/swagger-ui/index.html" target="_blank" class="btn-link demo" style="background:#2e7d32;">
+                            <i class="fas fa-file-alt"></i> Swagger — API Docs
+                        </a>
+                        <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" class="btn-link demo" style="background:#0a66c2;">
+                            <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                     </div>
                 </div>
@@ -104,73 +142,86 @@
         </div>
     </section>
 
+    <!-- Galeria de screenshots -->
     <section class="projeto-galeria-detalhada">
-    <h2>Capturas do Projeto</h2>
+        <h2>Capturas do Projeto</h2>
 
-    <div class="galeria-grid">
+        <div class="galeria-grid">
 
-        <figure class="galeria-item">
-            <img src="/images/projeto_img_0_physical.png" alt="Lista de compras compartilhada">
-            <figcaption>
-                Gerenciamento de venda com diversos filtros
-            </figcaption>
-        </figure>
+            <figure class="galeria-item">
+                <img src="../images/cashpilot_login.png" alt="Tela de login do Cash Pilot">
+                <figcaption>
+                    Tela de login com autenticação JWT e validação de credenciais
+                </figcaption>
+            </figure>
 
-        <figure class="galeria-item">
-            <img src="/images/projeto_img_1_physical.png" alt="Categorias de produtos">
-            <figcaption>
-                Formas de pagamento que facilitam a visão de custos de operação
-            </figcaption>
-        </figure>
+            <figure class="galeria-item">
+                <img src="../images/cashpilot_dashboard.png" alt="Dashboard do Cash Pilot">
+                <figcaption>
+                    Dashboard com resumo de receitas, despesas e saldo em tempo real
+                </figcaption>
+            </figure>
 
-        <figure class="galeria-item">
-            <img src="/images/projeto_img_2_physical.png" alt="Tela de login">
-            <figcaption>
-                Produtos altamente configuraveis com imagem para fácil identificação
-            </figcaption>
-        </figure>
+            <figure class="galeria-item">
+                <img src="../images/cashpilot_create.png" alt="Tela de criar transação">
+                <figcaption>
+                    Criação de transação com seletor visual de tipo (Receita / Despesa)
+                </figcaption>
+            </figure>
 
-    </div>
-</section>
+            <figure class="galeria-item">
+                <img src="../images/cashpilot_edit.png" alt="Tela de editar transação">
+                <figcaption>
+                    Edição de transação com formulário pré-preenchido
+                </figcaption>
+            </figure>
 
-<section class="projeto-roadmap">
-    <h2>Atualizações Futuras</h2>
+        </div>
+    </section>
 
-    <p class="roadmap-descricao">
-        O Physical Med Management está em constante evolução, com foco em ampliar
-        o controle e a análise do desempenho do negócio.
-    </p>
+    <!-- Roadmap -->
+    <section class="projeto-roadmap">
+        <h2>Atualizações Futuras</h2>
 
-    <ul class="roadmap-lista">
-        <li>
-            <i class="fas fa-chart-line"></i>
-            Implementação de relatórios detalhados de vendas e faturamento com possibilidade de exportação para PDF
-        </li>
-        <li>
-            <i class="fas fa-boxes"></i>
-            Sistema de notificação por Email de vendas ou baixo estoque de produtos
-        </li>
-        <li>
-            <i class="fas fa-paint-brush"></i>
-            Aprimoramentos contínuos na usabilidade e experiência do usuário
-        </li>
-    </ul>
-</section>
+        <p class="roadmap-descricao">
+            O Cash Pilot está em evolução contínua, com foco em ampliar o controle
+            financeiro e a experiência do usuário.
+        </p>
 
-
+        <ul class="roadmap-lista">
+            <li>
+                <i class="fas fa-calendar-alt"></i>
+                Filtro de transações por mês e ano no dashboard
+            </li>
+            <li>
+                <i class="fas fa-chart-pie"></i>
+                Gráficos de evolução financeira mensal
+            </li>
+            <li>
+                <i class="fas fa-tags"></i>
+                Categorias personalizadas para organização das transações
+            </li>
+            <li>
+                <i class="fas fa-file-export"></i>
+                Exportação do extrato financeiro em PDF
+            </li>
+            <li>
+                <i class="fas fa-vial"></i>
+                Testes unitários com JUnit e Mockito
+            </li>
+        </ul>
+    </section>
 
 </main>
 
 <footer id="contato" class="footer">
     <div class="footer-container">
 
-        <!-- Info principal -->
         <div class="footer-brand">
             <h3>Diego Oliveira</h3>
             <p>Desenvolvedor Full Stack Java</p>
         </div>
 
-        <!-- Navegação rápida -->
         <div class="footer-nav">
             <h4>Navegação</h4>
             <ul>
@@ -181,21 +232,20 @@
             </ul>
         </div>
 
-        <!-- Redes sociais -->
         <div class="footer-social">
-    <h4>Conecte-se</h4>
+            <h4>Conecte-se</h4>
+            <div class="social-links icons">
+                <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
 
-    <div class="social-links icons">
-        <a href="https://www.linkedin.com/in/diego-oliveira-da-fonte-2395b0223/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-            LinkedIn
-        </a>
-
-        <a href="https://github.com/DiegoOliveira01?tab=repositories" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-            GitHub
-        </a>
-    </div>
     </div>
 
     <div class="footer-bottom">
@@ -203,13 +253,12 @@
     </div>
 </footer>
 
+<!-- Lightbox -->
 <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <img class="lightbox-img" src="" alt="">
     <p class="lightbox-caption"></p>
 </div>
-
-</body>
 
 <script>
 const lightbox = document.getElementById("lightbox");
@@ -221,7 +270,7 @@ document.querySelectorAll(".galeria-item img").forEach(img => {
     img.addEventListener("click", () => {
         lightbox.style.display = "flex";
         lightboxImg.src = img.src;
-        lightboxCaption.textContent = img.nextElementSibling?.textContent || "";
+        lightboxCaption.textContent = img.closest("figure").querySelector("figcaption")?.textContent || "";
     });
 });
 
@@ -236,5 +285,5 @@ lightbox.addEventListener("click", (e) => {
 });
 </script>
 
-
+</body>
 </html>
