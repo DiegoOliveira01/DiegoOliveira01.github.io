@@ -1,0 +1,70 @@
+/* =========================================================
+   1. FADE-IN AO ROLAR
+   Adiciona a classe .fade-in nos elementos que deseja animar.
+   A classe .visible é adicionada via JS (scroll.js)
+   ========================================================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay escalonado para listas de cards */
+.fade-in:nth-child(1) { transition-delay: 0s;    }
+.fade-in:nth-child(2) { transition-delay: 0.15s; }
+.fade-in:nth-child(3) { transition-delay: 0.3s;  }
+.fade-in:nth-child(4) { transition-delay: 0.45s; }
+
+
+/* =========================================================
+   2. EFEITO DE DIGITAÇÃO
+   Aplicado ao h2 do perfil via JS
+   ========================================================= */
+
+.typing-cursor::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.75s step-end infinite;
+    color: #1e88e5;
+    margin-left: 2px;
+    font-weight: 300;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+
+/* =========================================================
+   3. CONTADOR DE HABILIDADES
+   Os itens da lista entram um a um com slide + fade
+   ========================================================= */
+
+.habilidade-card li {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.habilidade-card.animado li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Delay progressivo para cada item (até 9 itens) */
+.habilidade-card.animado li:nth-child(1)  { transition-delay: 0.05s; }
+.habilidade-card.animado li:nth-child(2)  { transition-delay: 0.15s; }
+.habilidade-card.animado li:nth-child(3)  { transition-delay: 0.25s; }
+.habilidade-card.animado li:nth-child(4)  { transition-delay: 0.35s; }
+.habilidade-card.animado li:nth-child(5)  { transition-delay: 0.45s; }
+.habilidade-card.animado li:nth-child(6)  { transition-delay: 0.55s; }
+.habilidade-card.animado li:nth-child(7)  { transition-delay: 0.65s; }
+.habilidade-card.animado li:nth-child(8)  { transition-delay: 0.75s; }
+.habilidade-card.animado li:nth-child(9)  { transition-delay: 0.85s; }

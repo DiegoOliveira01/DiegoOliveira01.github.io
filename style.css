@@ -529,8 +529,15 @@ h1, h2, h3 {
     max-width: 700px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
     gap: 20px;
+}
+
+/* Para manter 4 icones de download em um quadrado em telas menores */
+@media (max-width: 768px) {
+    .contato-links {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 */
+    }
 }
 
 /* Links e botão base */
@@ -550,6 +557,11 @@ h1, h2, h3 {
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+/* Cor do botão para o curriculo em PDF */
+.contato-links .btn-curriculo i {
+    color: #e53935; /* vermelho do PDF */
 }
 
 /* Ícones */
