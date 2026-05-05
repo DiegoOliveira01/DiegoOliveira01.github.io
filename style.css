@@ -559,16 +559,17 @@ h1, h2, h3 {
     transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
-/* Cor do botão para o curriculo em PDF */
-.contato-links .btn-curriculo i {
-    color: #e53935; /* vermelho do PDF */
-}
 
 /* Ícones */
 .contato-links i {
     font-size: 1.3rem;
     color: #1e88e5;
     transition: color 0.3s;
+}
+
+/* Cor do botão para o curriculo em PDF */
+.contato-links .btn-curriculo i {
+    color: #e53935; /* vermelho do PDF */
 }
 
 /* Hover */
